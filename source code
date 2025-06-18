@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>  // For setprecision
+using namespace std;
+
+int main() {
+    int P, R, T;
+    cin >> P >> R >> T;
+
+    // Calculate interest
+    float interest = (P * R * T) / 100.0;
+
+    // Total amount
+    float amount = P + interest;
+
+    // Discount (2% of interest)
+    float discount = 0.02 * interest;
+
+    // Final settlement amount
+    float final_settlement = amount - discount;
+
+    // Output with 2 decimal places
+    cout << fixed << setprecision(2);
+    cout << interest << endl;
+    cout << amount << endl;
+    cout << discount << endl;
+    cout << final_settlement << endl;
+
+    return 0;
+}
